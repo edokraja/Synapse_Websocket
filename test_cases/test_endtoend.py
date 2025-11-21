@@ -21,7 +21,6 @@ def start_server():
     server_start.cancel()
 
 
-# actual test
 @pytest.mark.asyncio
 async def test_client_to_server():
     """
