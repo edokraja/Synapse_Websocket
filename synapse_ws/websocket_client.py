@@ -3,8 +3,14 @@ import json
 import websockets
 
 
-# Sending messages to server and waititng for response
+
 async def send_message(a: int, b: int) -> int:
+    """
+    This function connects to the server, 
+    sends messages to the server and receives 
+    a response back.
+    """
+    
     async with websockets.connect("ws://localhost:8000") as websc:
         await websc.send(json.dumps({"a": a, "b": b}))
         response = json.loads(await websc.recv())
@@ -14,8 +20,14 @@ async def send_message(a: int, b: int) -> int:
 
         return response["result"]
 
-# Sending each of the pairs to server, getting the result and printing
+
 async def check():
+    """
+    This function declares an array of pairs,
+    unpacks and sends each as message to the server
+    and prints the result.
+    """
+
     print("Calling server...\n")
 
     tests = [(5, 5), (3, 4), (7, 8)]

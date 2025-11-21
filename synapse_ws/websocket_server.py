@@ -5,13 +5,24 @@ import websockets
 
 # function to multiply 2 numbers
 def multiply(a: int, b: int):
+    """
+    Multiplies two integers and returns result
+    """
     result = a*b 
     return result
 
 
 
-# getting client messages and sending result
+
 async def get_client_message(websocket):
+
+    """
+    This function listens each message, unpacks it,
+    checks if it is a valid type, calculates a result
+    and sends it back to the client
+    """
+
+
     async for message in websocket:
 
         # try except for error handling
@@ -34,8 +45,14 @@ async def get_client_message(websocket):
             await websocket.send(json.dumps({"error": "Malformed JSON"}))
 
 
-# Running live connection server
+
 async def main():
+    """
+    This function starts the websocket server
+    and keeps it running forever
+    """
+
+
     async with websockets.serve(get_client_message, "localhost", 8000):
         print("Server running on ws://localhost:8000")
         await asyncio.Future()
