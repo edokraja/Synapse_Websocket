@@ -5,7 +5,7 @@ This project demonstrates a simple asynchronous Websocket server.
 ## Setup
 1. **Clone the repository**
 In the terminal run:
-git clone https://github.com/yourusername/Synapse_Websocket.git  
+git clone https://github.com/edokraja/Synapse_Websocket.git  
 cd Synapse_Websocket
 
 2. **Create a virtual environment (optional)**
