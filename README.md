@@ -3,23 +3,23 @@
 This project demonstrates a simple asynchronous Websocket server.
 
 ## Setup
-1. **Clone the repository**
-In the terminal run:
+1. **Clone the repository**  
+In the terminal run:  
 "git clone https://github.com/edokraja/Synapse_Websocket.git"  
 cd Synapse_Websocket
 
-2. **Create a virtual environment (optional)**
-python -m venv venv
+2. **Create a virtual environment (optional)**  
+python -m venv venv  
 venv\Scripts\activate.bat
 
-3. **Install required dependencies**
+3. **Install required dependencies**  
 pip install -r requirements.txt
 
-4. **Run the server**
-python synapse_ws/server.py
+4. **Run the server**  
+python synapse_ws/websocket_server.py
 
-5. **Open a new terminal in the same directory and run the client**
-python synapse_ws/client.py
+5. **Open a new terminal in the same directory and run the client**  
+python synapse_ws/websocket_client.py
 
 
 ## Example Output
