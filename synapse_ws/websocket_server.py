@@ -6,7 +6,7 @@ import websockets
 # function to multiply 2 numbers
 def multiply(a: int, b: int):
     """
-    Multiplies two integers and returns result
+    Multiplies two integers and returns result.
     """
     result = a*b 
     return result
@@ -19,7 +19,7 @@ async def get_client_message(websocket):
     """
     This function listens each message, unpacks it,
     checks if it is a valid type, calculates a result
-    and sends it back to the client
+    and sends it back to the client.
     """
 
 
@@ -49,7 +49,7 @@ async def get_client_message(websocket):
 async def main():
     """
     This function starts the websocket server
-    and keeps it running forever
+    and keeps it running forever.
     """
 
 
